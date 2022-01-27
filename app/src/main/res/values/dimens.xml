@@ -4,4 +4,6 @@
     <dimen name="button_width">80dp</dimen>
     <dimen name="button_height">90dp</dimen>
     <dimen name="button_radius">50dp</dimen>
+    <dimen name="text_size_output">60sp</dimen>
+    <dimen name="text_size_memory">30sp</dimen>
 </resources>

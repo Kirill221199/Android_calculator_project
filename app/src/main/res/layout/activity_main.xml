@@ -7,18 +7,30 @@
     android:background="@drawable/fon"
     tools:context=".MainActivity">
 
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text_memory"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:gravity="bottom|right"
-        android:text="0,3452324"
+        android:layout_height="@dimen/text_size_output"
+        android:gravity="bottom|end"
+        android:textColor="@color/special_min"
+        android:textSize="@dimen/text_size_memory"
+        app:layout_constraintBottom_toTopOf="@id/text_present"
+        app:layout_constraintEnd_toEndOf="@id/button_division"
+        app:layout_constraintStart_toStartOf="@id/button_clear"
+        tools:text="MEMORY" />
+
+    <TextView
+        android:id="@+id/text_present"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_size_output"
+        android:gravity="bottom|end"
         android:textColor="@color/special"
-        android:textSize="60sp"
+        android:textSize="@dimen/text_size_output"
         app:layout_constraintBottom_toTopOf="@id/button_percent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@id/button_division"
+        app:layout_constraintStart_toStartOf="@id/button_clear"
+        tools:text="PRESENT" />
 
     <Button
         android:id="@+id/button_division"
@@ -250,7 +262,7 @@
 
     <Button
         android:id="@+id/button_0"
-        android:layout_width="160dp"
+        android:layout_width="0dp"
         android:layout_height="@dimen/button_height"
         android:backgroundTint="@color/colorless"
         android:text="@string/_0"
@@ -258,9 +270,9 @@
         android:textSize="@dimen/symbol_size"
         app:cornerRadius="@dimen/button_radius"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_point"
+        app:layout_constraintEnd_toEndOf="@id/button_2"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@id/button_1" />
 
     <Button
         android:id="@+id/button_point"
@@ -272,9 +284,9 @@
         android:textSize="@dimen/symbol_size"
         app:cornerRadius="@dimen/button_radius"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_equal"
+        app:layout_constraintEnd_toEndOf="@id/button_3"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_0" />
+        app:layout_constraintStart_toStartOf="@id/button_3" />
 
 
     <Button
@@ -287,9 +299,9 @@
         android:textSize="@dimen/symbol_size"
         app:cornerRadius="@dimen/button_radius"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/button_plus"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_point" />
+        app:layout_constraintStart_toStartOf="@id/button_plus" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,6 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="special">#8c8f00</color>
+    <color name="special_min">#686A01</color>
     <color name="colorless">#1A000000</color>
 
 </resources>
