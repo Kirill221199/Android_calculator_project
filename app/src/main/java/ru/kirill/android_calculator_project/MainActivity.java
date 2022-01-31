@@ -8,9 +8,10 @@ import android.widget.Button;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import java.io.Serializable;
+
 public class MainActivity extends AppCompatActivity {
 
- // Var layout
         protected Button one;
         protected Button two;
         protected Button three;
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         String var_minus;
         String var_multiplication;
         String var_division;
+        String var_percent;
         String znak;
 
 
@@ -61,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
         setListenerFunction();
 
     }
-
 
     public void initialization(){
 
@@ -89,6 +90,8 @@ public class MainActivity extends AppCompatActivity {
 
         present = findViewById(R.id.text_present);
         memory = findViewById(R.id.text_memory);
+
+        present.setText("0");
     }
 
     public void setListener(){
@@ -113,6 +116,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else if (znak == "/"){
                         present.setText(var_division + sb_second);
+                    }
+                    else if (znak == "%"){
+                        present.setText(var_percent + sb_second);
                     }
                 }
 
@@ -140,6 +146,9 @@ public class MainActivity extends AppCompatActivity {
                     else if (znak == "/"){
                         present.setText(var_division + sb_second);
                     }
+                    else if (znak == "%"){
+                        present.setText(var_percent + sb_second);
+                    }
                 }
 
             }
@@ -165,6 +174,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else if (znak == "/"){
                         present.setText(var_division + sb_second);
+                    }
+                    else if (znak == "%"){
+                        present.setText(var_percent + sb_second);
                     }
                 }
 
@@ -192,6 +204,9 @@ public class MainActivity extends AppCompatActivity {
                     else if (znak == "/"){
                         present.setText(var_division + sb_second);
                     }
+                    else if (znak == "%"){
+                        present.setText(var_percent + sb_second);
+                    }
                 }
 
             }
@@ -217,6 +232,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else if (znak == "/"){
                         present.setText(var_division + sb_second);
+                    }
+                    else if (znak == "%"){
+                        present.setText(var_percent + sb_second);
                     }
                 }
 
@@ -244,6 +262,9 @@ public class MainActivity extends AppCompatActivity {
                     else if (znak == "/"){
                         present.setText(var_division + sb_second);
                     }
+                    else if (znak == "%"){
+                        present.setText(var_percent + sb_second);
+                    }
                 }
 
             }
@@ -269,6 +290,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else if (znak == "/"){
                         present.setText(var_division + sb_second);
+                    }
+                    else if (znak == "%"){
+                        present.setText(var_percent + sb_second);
                     }
                 }
 
@@ -296,6 +320,9 @@ public class MainActivity extends AppCompatActivity {
                     else if (znak == "/"){
                         present.setText(var_division + sb_second);
                     }
+                    else if (znak == "%"){
+                        present.setText(var_percent + sb_second);
+                    }
                 }
 
             }
@@ -321,6 +348,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else if (znak == "/"){
                         present.setText(var_division + sb_second);
+                    }
+                    else if (znak == "%"){
+                        present.setText(var_percent + sb_second);
                     }
                 }
 
@@ -348,6 +378,9 @@ public class MainActivity extends AppCompatActivity {
                     else if (znak == "/"){
                         present.setText(var_division + sb_second);
                     }
+                    else if (znak == "%"){
+                        present.setText(var_percent + sb_second);
+                    }
                 }
 
             }
@@ -374,6 +407,9 @@ public class MainActivity extends AppCompatActivity {
                     else if (znak == "/"){
                         present.setText(var_division + sb_second);
                     }
+                    else if (znak == "%"){
+                        present.setText(var_percent + sb_second);
+                    }
                 }
 
             }
@@ -387,6 +423,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 clearVar();
                 present.setText("0");
+            }
+        });
+
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                present.setText("in development");
             }
         });
 
@@ -442,6 +485,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        percent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (sb_first != null) {
+                    var_first_str = String.valueOf(sb_first);
+                    sb_first.delete(0,sb_first.length());
+                    var_percent = (var_first_str + "%");
+                    znak = "%";
+                    present.setText(var_percent);
+                }
+            }
+        });
+
         equal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -456,6 +512,8 @@ public class MainActivity extends AppCompatActivity {
                     result = var_first + var_second;
 
                     present.setText(String.valueOf(result));
+
+                    memory.setText(String.valueOf(result));
                     clearVar();
                 }
 
@@ -469,6 +527,8 @@ public class MainActivity extends AppCompatActivity {
                     result = var_first - var_second;
 
                     present.setText(String.valueOf(result));
+
+                    memory.setText(String.valueOf(result));
                     clearVar();
                 }
 
@@ -482,6 +542,8 @@ public class MainActivity extends AppCompatActivity {
                     result = var_first * var_second;
 
                     present.setText(String.valueOf(result));
+
+                    memory.setText(String.valueOf(result));
                     clearVar();
                 }
 
@@ -495,6 +557,23 @@ public class MainActivity extends AppCompatActivity {
                     result = var_first / var_second;
 
                     present.setText(String.valueOf(result));
+
+                    memory.setText(String.valueOf(result));
+                    clearVar();
+                }
+
+                else if (znak == "%"){
+
+                    var_second_str = String.valueOf(sb_second);
+                    sb_second.delete(0,sb_second.length());
+
+                    var_first = Float.parseFloat(String.valueOf(var_first_str));
+                    var_second = Float.parseFloat(String.valueOf(var_second_str));
+                    result = (var_first/100) * var_second;
+
+                    present.setText(String.valueOf(result));
+
+                    memory.setText(String.valueOf(result));
                     clearVar();
                 }
             }

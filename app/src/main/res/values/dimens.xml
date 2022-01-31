@@ -7,7 +7,7 @@
     <dimen name="button_width_land">63dp</dimen>
     <dimen name="button_height_land">73dp</dimen>
     <dimen name="button_radius">50dp</dimen>
-    <dimen name="text_size_output">60sp</dimen>
+    <dimen name="text_size_output">50sp</dimen>
     <dimen name="text_size_memory">30sp</dimen>
     <dimen name="margin_button">8dp</dimen>
 </resources>
