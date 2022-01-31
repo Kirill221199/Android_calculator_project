@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Android_calculator_project</string>
     <string name="division">/</string>
-    <string name="persent">%</string>
+    <string name="perсent">%</string>
     <string name="clear">C</string>
     <string name="delete">⌫</string>
     <string name="_7">7</string>
