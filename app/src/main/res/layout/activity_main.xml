@@ -17,19 +17,17 @@
         android:textSize="@dimen/text_size_memory"
         app:layout_constraintBottom_toTopOf="@id/text_present"
         app:layout_constraintEnd_toEndOf="@id/button_division"
-        app:layout_constraintStart_toStartOf="@id/button_clear"
         tools:text="MEMORY" />
 
     <TextView
         android:id="@+id/text_present"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="@dimen/text_size_output"
         android:gravity="bottom|end"
         android:textColor="@color/special"
         android:textSize="@dimen/text_size_output"
         app:layout_constraintBottom_toTopOf="@id/button_percent"
         app:layout_constraintEnd_toEndOf="@id/button_division"
-        app:layout_constraintStart_toStartOf="@id/button_clear"
         tools:text="PRESENT" />
 
     <Button
