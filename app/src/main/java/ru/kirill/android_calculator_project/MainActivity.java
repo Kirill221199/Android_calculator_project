@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         String var_first_str;
         String var_second_str;
         String var_plus;
+        String var_minus;
         String znak;
 
 
@@ -99,7 +100,13 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     sb_second.append("1");
-                    present.setText(var_plus + sb_second);
+                    if (znak == "+"){
+                        present.setText(var_plus + sb_second);
+                    }
+                    if (znak == "-"){
+                        present.setText(var_minus + sb_second);
+                    }
+
                 }
 
             }
@@ -114,7 +121,12 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     sb_second.append("2");
-                    present.setText(var_plus + sb_second);
+                    if (znak == "+"){
+                        present.setText(var_plus + sb_second);
+                    }
+                    if (znak == "-"){
+                        present.setText(var_minus + sb_second);
+                    }
                 }
 
             }
@@ -129,7 +141,12 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     sb_second.append("3");
-                    present.setText(var_plus + sb_second);
+                    if (znak == "+"){
+                        present.setText(var_plus + sb_second);
+                    }
+                    if (znak == "-"){
+                        present.setText(var_minus + sb_second);
+                    }
                 }
 
             }
@@ -144,7 +161,12 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     sb_second.append("4");
-                    present.setText(var_plus + sb_second);
+                    if (znak == "+"){
+                        present.setText(var_plus + sb_second);
+                    }
+                    if (znak == "-"){
+                        present.setText(var_minus + sb_second);
+                    }
                 }
 
             }
@@ -159,7 +181,12 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     sb_second.append("5");
-                    present.setText(var_plus + sb_second);
+                    if (znak == "+"){
+                        present.setText(var_plus + sb_second);
+                    }
+                    if (znak == "-"){
+                        present.setText(var_minus + sb_second);
+                    }
                 }
 
             }
@@ -174,7 +201,12 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     sb_second.append("6");
-                    present.setText(var_plus + sb_second);
+                    if (znak == "+"){
+                        present.setText(var_plus + sb_second);
+                    }
+                    if (znak == "-"){
+                        present.setText(var_minus + sb_second);
+                    }
                 }
 
             }
@@ -189,7 +221,12 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     sb_second.append("7");
-                    present.setText(var_plus + sb_second);
+                    if (znak == "+"){
+                        present.setText(var_plus + sb_second);
+                    }
+                    if (znak == "-"){
+                        present.setText(var_minus + sb_second);
+                    }
                 }
 
             }
@@ -204,7 +241,12 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     sb_second.append("8");
-                    present.setText(var_plus + sb_second);
+                    if (znak == "+"){
+                        present.setText(var_plus + sb_second);
+                    }
+                    if (znak == "-"){
+                        present.setText(var_minus + sb_second);
+                    }
                 }
 
             }
@@ -219,7 +261,12 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     sb_second.append("9");
-                    present.setText(var_plus + sb_second);
+                    if (znak == "+"){
+                        present.setText(var_plus + sb_second);
+                    }
+                    if (znak == "-"){
+                        present.setText(var_minus + sb_second);
+                    }
                 }
 
             }
@@ -234,7 +281,12 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     sb_second.append("0");
-                    present.setText(var_plus + sb_second);
+                    if (znak == "+"){
+                        present.setText(var_plus + sb_second);
+                    }
+                    if (znak == "-"){
+                        present.setText(var_minus + sb_second);
+                    }
                 }
 
             }
@@ -249,7 +301,12 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     sb_second.append(".");
-                    present.setText(var_plus + sb_second);
+                    if (znak == "+"){
+                        present.setText(var_plus + sb_second);
+                    }
+                    if (znak == "-"){
+                        present.setText(var_minus + sb_second);
+                    }
                 }
 
             }
@@ -272,6 +329,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (sb_first != null) {
+                    var_first_str = String.valueOf(sb_first);
+                    sb_first.delete(0,sb_first.length());
+                    var_minus = (var_first_str + "-");
+                    znak = "-";
+                    present.setText(var_minus);
+                }
+            }
+        });
+
         equal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -288,6 +358,19 @@ public class MainActivity extends AppCompatActivity {
                     present.setText(String.valueOf(result));
                     clearVar();
                 }
+
+                if (znak == "-"){
+
+                    var_second_str = String.valueOf(sb_second);
+                    sb_second.delete(0,sb_second.length());
+
+                    var_first = Float.parseFloat(String.valueOf(var_first_str));
+                    var_second = Float.parseFloat(String.valueOf(var_second_str));
+                    result = var_first - var_second;
+
+                    present.setText(String.valueOf(result));
+                    clearVar();
+                }
             }
         });
 
@@ -300,6 +383,8 @@ public class MainActivity extends AppCompatActivity {
         var_first_str = null;
         var_second_str = null;
         znak = null;
+        sb_first.delete(0,sb_first.length());
+        sb_second.delete(0,sb_second.length());
     }
 
 
