@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
         String var_second_str;
         String var_plus;
         String var_minus;
+        String var_multiplication;
+        String var_division;
         String znak;
 
 
@@ -103,10 +105,15 @@ public class MainActivity extends AppCompatActivity {
                     if (znak == "+"){
                         present.setText(var_plus + sb_second);
                     }
-                    if (znak == "-"){
+                    else if (znak == "-"){
                         present.setText(var_minus + sb_second);
                     }
-
+                    else if (znak == "*"){
+                        present.setText(var_multiplication + sb_second);
+                    }
+                    else if (znak == "/"){
+                        present.setText(var_division + sb_second);
+                    }
                 }
 
             }
@@ -124,8 +131,14 @@ public class MainActivity extends AppCompatActivity {
                     if (znak == "+"){
                         present.setText(var_plus + sb_second);
                     }
-                    if (znak == "-"){
+                    else if (znak == "-"){
                         present.setText(var_minus + sb_second);
+                    }
+                    else if (znak == "*"){
+                        present.setText(var_multiplication + sb_second);
+                    }
+                    else if (znak == "/"){
+                        present.setText(var_division + sb_second);
                     }
                 }
 
@@ -144,8 +157,14 @@ public class MainActivity extends AppCompatActivity {
                     if (znak == "+"){
                         present.setText(var_plus + sb_second);
                     }
-                    if (znak == "-"){
+                    else if (znak == "-"){
                         present.setText(var_minus + sb_second);
+                    }
+                    else if (znak == "*"){
+                        present.setText(var_multiplication + sb_second);
+                    }
+                    else if (znak == "/"){
+                        present.setText(var_division + sb_second);
                     }
                 }
 
@@ -164,8 +183,14 @@ public class MainActivity extends AppCompatActivity {
                     if (znak == "+"){
                         present.setText(var_plus + sb_second);
                     }
-                    if (znak == "-"){
+                    else if (znak == "-"){
                         present.setText(var_minus + sb_second);
+                    }
+                    else if (znak == "*"){
+                        present.setText(var_multiplication + sb_second);
+                    }
+                    else if (znak == "/"){
+                        present.setText(var_division + sb_second);
                     }
                 }
 
@@ -184,8 +209,14 @@ public class MainActivity extends AppCompatActivity {
                     if (znak == "+"){
                         present.setText(var_plus + sb_second);
                     }
-                    if (znak == "-"){
+                    else if (znak == "-"){
                         present.setText(var_minus + sb_second);
+                    }
+                    else if (znak == "*"){
+                        present.setText(var_multiplication + sb_second);
+                    }
+                    else if (znak == "/"){
+                        present.setText(var_division + sb_second);
                     }
                 }
 
@@ -204,8 +235,14 @@ public class MainActivity extends AppCompatActivity {
                     if (znak == "+"){
                         present.setText(var_plus + sb_second);
                     }
-                    if (znak == "-"){
+                    else if (znak == "-"){
                         present.setText(var_minus + sb_second);
+                    }
+                    else if (znak == "*"){
+                        present.setText(var_multiplication + sb_second);
+                    }
+                    else if (znak == "/"){
+                        present.setText(var_division + sb_second);
                     }
                 }
 
@@ -224,8 +261,14 @@ public class MainActivity extends AppCompatActivity {
                     if (znak == "+"){
                         present.setText(var_plus + sb_second);
                     }
-                    if (znak == "-"){
+                    else if (znak == "-"){
                         present.setText(var_minus + sb_second);
+                    }
+                    else if (znak == "*"){
+                        present.setText(var_multiplication + sb_second);
+                    }
+                    else if (znak == "/"){
+                        present.setText(var_division + sb_second);
                     }
                 }
 
@@ -244,8 +287,14 @@ public class MainActivity extends AppCompatActivity {
                     if (znak == "+"){
                         present.setText(var_plus + sb_second);
                     }
-                    if (znak == "-"){
+                    else if (znak == "-"){
                         present.setText(var_minus + sb_second);
+                    }
+                    else if (znak == "*"){
+                        present.setText(var_multiplication + sb_second);
+                    }
+                    else if (znak == "/"){
+                        present.setText(var_division + sb_second);
                     }
                 }
 
@@ -264,8 +313,14 @@ public class MainActivity extends AppCompatActivity {
                     if (znak == "+"){
                         present.setText(var_plus + sb_second);
                     }
-                    if (znak == "-"){
+                    else if (znak == "-"){
                         present.setText(var_minus + sb_second);
+                    }
+                    else if (znak == "*"){
+                        present.setText(var_multiplication + sb_second);
+                    }
+                    else if (znak == "/"){
+                        present.setText(var_division + sb_second);
                     }
                 }
 
@@ -284,8 +339,14 @@ public class MainActivity extends AppCompatActivity {
                     if (znak == "+"){
                         present.setText(var_plus + sb_second);
                     }
-                    if (znak == "-"){
+                    else if (znak == "-"){
                         present.setText(var_minus + sb_second);
+                    }
+                    else if (znak == "*"){
+                        present.setText(var_multiplication + sb_second);
+                    }
+                    else if (znak == "/"){
+                        present.setText(var_division + sb_second);
                     }
                 }
 
@@ -304,8 +365,14 @@ public class MainActivity extends AppCompatActivity {
                     if (znak == "+"){
                         present.setText(var_plus + sb_second);
                     }
-                    if (znak == "-"){
+                    else if (znak == "-"){
                         present.setText(var_minus + sb_second);
+                    }
+                    else if (znak == "*"){
+                        present.setText(var_multiplication + sb_second);
+                    }
+                    else if (znak == "/"){
+                        present.setText(var_division + sb_second);
                     }
                 }
 
@@ -313,8 +380,15 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
     public void setListenerFunction() {
+
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clearVar();
+                present.setText("0");
+            }
+        });
 
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -342,6 +416,32 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        multiplication.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (sb_first != null) {
+                    var_first_str = String.valueOf(sb_first);
+                    sb_first.delete(0,sb_first.length());
+                    var_multiplication = (var_first_str + "*");
+                    znak = "*";
+                    present.setText(var_multiplication);
+                }
+            }
+        });
+
+        division.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (sb_first != null) {
+                    var_first_str = String.valueOf(sb_first);
+                    sb_first.delete(0,sb_first.length());
+                    var_division = (var_first_str + "/");
+                    znak = "/";
+                    present.setText(var_division);
+                }
+            }
+        });
+
         equal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -359,7 +459,7 @@ public class MainActivity extends AppCompatActivity {
                     clearVar();
                 }
 
-                if (znak == "-"){
+                else if (znak == "-"){
 
                     var_second_str = String.valueOf(sb_second);
                     sb_second.delete(0,sb_second.length());
@@ -367,6 +467,32 @@ public class MainActivity extends AppCompatActivity {
                     var_first = Float.parseFloat(String.valueOf(var_first_str));
                     var_second = Float.parseFloat(String.valueOf(var_second_str));
                     result = var_first - var_second;
+
+                    present.setText(String.valueOf(result));
+                    clearVar();
+                }
+
+                else if (znak == "*"){
+
+                    var_second_str = String.valueOf(sb_second);
+                    sb_second.delete(0,sb_second.length());
+
+                    var_first = Float.parseFloat(String.valueOf(var_first_str));
+                    var_second = Float.parseFloat(String.valueOf(var_second_str));
+                    result = var_first * var_second;
+
+                    present.setText(String.valueOf(result));
+                    clearVar();
+                }
+
+                else if (znak == "/"){
+
+                    var_second_str = String.valueOf(sb_second);
+                    sb_second.delete(0,sb_second.length());
+
+                    var_first = Float.parseFloat(String.valueOf(var_first_str));
+                    var_second = Float.parseFloat(String.valueOf(var_second_str));
+                    result = var_first / var_second;
 
                     present.setText(String.valueOf(result));
                     clearVar();
