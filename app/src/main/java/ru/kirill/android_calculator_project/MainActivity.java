@@ -539,7 +539,7 @@ public class MainActivity extends AppCompatActivity {
                     present.setText(String.valueOf(result));
 
                     memory.setText(String.valueOf(result));
-                    clearVar();
+                    clearVarNext();
                 }
 
                 else if (znak == "-"){
@@ -554,7 +554,7 @@ public class MainActivity extends AppCompatActivity {
                     present.setText(String.valueOf(result));
 
                     memory.setText(String.valueOf(result));
-                    clearVar();
+                    clearVarNext();
                 }
 
                 else if (znak == "*"){
@@ -569,7 +569,7 @@ public class MainActivity extends AppCompatActivity {
                     present.setText(String.valueOf(result));
 
                     memory.setText(String.valueOf(result));
-                    clearVar();
+                    clearVarNext();
                 }
 
                 else if (znak == "/"){
@@ -584,7 +584,7 @@ public class MainActivity extends AppCompatActivity {
                     present.setText(String.valueOf(result));
 
                     memory.setText(String.valueOf(result));
-                    clearVar();
+                    clearVarNext();
                 }
 
                 else if (znak == "%"){
@@ -599,7 +599,7 @@ public class MainActivity extends AppCompatActivity {
                     present.setText(String.valueOf(result));
 
                     memory.setText(String.valueOf(result));
-                    clearVar();
+                    clearVarNext();
                 }
             }
         });
@@ -616,6 +616,16 @@ public class MainActivity extends AppCompatActivity {
         sb_first.delete(0,sb_first.length());
         sb_second.delete(0,sb_second.length());
     }
+
+    public void clearVarNext(){
+        var_second = 0;
+        var_second_str = null;
+        znak = null;
+        sb_second.delete(0,sb_second.length());
+        sb_first.delete(0,sb_first.length());
+        sb_first.append(result);
+    }
+
 
 
 }
