@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
         protected String var_percent;
         protected String znak;
 
+        protected Boolean flag_sb_first = false;
+        protected Boolean flag_sb_second = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
         present.setText("0");
         memory.setText(String.valueOf(result));
+
     }
 
     public void setListener(){
@@ -406,10 +409,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (var_first_str == null){
-                    sb_first.append(".");
-                    present.setText(sb_first);
+                    if (flag_sb_first == false){
+                        sb_first.append(".");
+                        present.setText(sb_first);
+                        flag_sb_first= true;
+                    }
                 }
-                else{
+                else{ if (flag_sb_second == false){
+
                     sb_second.append(".");
                     if (znak == "+"){
                         present.setText(var_plus + sb_second);
@@ -426,6 +433,8 @@ public class MainActivity extends AppCompatActivity {
                     else if (znak == "%"){
                         present.setText(var_percent + sb_second);
                     }
+                    flag_sb_second = true;
+                  }
                 }
 
             }
