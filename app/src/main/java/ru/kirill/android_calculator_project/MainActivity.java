@@ -1,5 +1,6 @@
 package ru.kirill.android_calculator_project;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -41,16 +42,16 @@ public class MainActivity extends AppCompatActivity {
         protected float var_first;
         protected float var_second;
 
-        StringBuffer sb_first = new StringBuffer();
-        StringBuffer sb_second = new StringBuffer();
-        String var_first_str;
-        String var_second_str;
-        String var_plus;
-        String var_minus;
-        String var_multiplication;
-        String var_division;
-        String var_percent;
-        String znak;
+        protected StringBuffer sb_first = new StringBuffer();
+        protected StringBuffer sb_second = new StringBuffer();
+        protected String var_first_str;
+        protected String var_second_str;
+        protected String var_plus;
+        protected String var_minus;
+        protected String var_multiplication;
+        protected String var_division;
+        protected String var_percent;
+        protected String znak;
 
 
     @Override
@@ -62,6 +63,20 @@ public class MainActivity extends AppCompatActivity {
         setListener();
         setListenerFunction();
 
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putFloat("result",result);
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        result = savedInstanceState.getFloat("result");
+        memory.setText(String.valueOf(result));
     }
 
     public void initialization(){
@@ -92,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
         memory = findViewById(R.id.text_memory);
 
         present.setText("0");
+        memory.setText(String.valueOf(result));
     }
 
     public void setListener(){
