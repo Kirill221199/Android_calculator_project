@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/text_memory"
         android:layout_width="match_parent"
         android:layout_height="@dimen/text_size_output"
@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="@id/button_division"
         tools:text="MEMORY" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/text_present"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/text_size_output"
@@ -30,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="@id/button_division"
         tools:text="PRESENT" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_division"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
@@ -44,7 +44,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button_delete" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_percent"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
@@ -58,7 +58,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button_clear" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_clear"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
@@ -72,7 +72,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_delete"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
@@ -86,7 +86,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button_percent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_7"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
@@ -114,7 +114,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button_7" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_9"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
@@ -128,7 +128,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button_8" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_multiplication"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
@@ -142,7 +142,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button_9" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_4"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
@@ -156,7 +156,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_5"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
@@ -170,7 +170,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button_4" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_6"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
@@ -184,7 +184,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button_5" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_minus"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
@@ -199,7 +199,7 @@
         app:layout_constraintStart_toEndOf="@+id/button_6" />
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_1"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
@@ -213,7 +213,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_2"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
@@ -228,7 +228,7 @@
         app:layout_constraintStart_toEndOf="@+id/button_1" />
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_3"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
@@ -243,7 +243,7 @@
         app:layout_constraintStart_toEndOf="@+id/button_2" />
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_plus"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
@@ -258,7 +258,7 @@
         app:layout_constraintStart_toEndOf="@+id/button_3" />
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_0"
         android:layout_width="0dp"
         android:layout_height="@dimen/button_height"
@@ -272,7 +272,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@id/button_1" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_point"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
@@ -287,7 +287,7 @@
         app:layout_constraintStart_toStartOf="@id/button_3" />
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_equal"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
