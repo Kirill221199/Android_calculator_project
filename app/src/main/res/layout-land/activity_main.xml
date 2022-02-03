@@ -15,7 +15,7 @@
         android:textColor="@color/text_default"
         android:textSize="@dimen/text_size_memory"
         app:layout_constraintBottom_toTopOf="@+id/text_present"
-        app:layout_constraintEnd_toStartOf="@+id/button_0"
+        app:layout_constraintStart_toStartOf="parent"
         tools:text="MEMORY" />
 
     <com.google.android.material.textview.MaterialTextView
@@ -26,7 +26,7 @@
         android:textColor="@color/text_default"
         android:textSize="@dimen/text_size_output"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_0"
+        app:layout_constraintStart_toStartOf="parent"
         tools:text="PRESENT" />
 
     <com.google.android.material.button.MaterialButton
