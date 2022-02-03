@@ -10,5 +10,6 @@
     <color name="special">#8c8f00</color>
     <color name="special_min">#7F8109</color>
     <color name="colorless">#1A000000</color>
+    <color name="colorless_full">#00000000</color>
 
 </resources>

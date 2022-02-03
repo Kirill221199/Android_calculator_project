@@ -1,15 +1,13 @@
 package ru.kirill.android_calculator_project;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Switch;
 import android.widget.TextView;
 
-import java.io.Serializable;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -64,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         initialization();
         setListener();
         setListenerFunction();
+        call_settings();
 
     }
 
@@ -81,7 +80,14 @@ public class MainActivity extends AppCompatActivity {
         memory.setText(String.valueOf(result));
     }
 
-    public void initialization(){
+    public void call_settings() {
+        (findViewById(R.id.button_settings)).setOnClickListener(view -> {
+            Intent intent = new Intent(this, SettingsActivity.class);
+            this.startActivity(intent);
+        });
+    }
+
+    public void initialization() {
 
         one = findViewById(R.id.button_1);
         two = findViewById(R.id.button_2);
