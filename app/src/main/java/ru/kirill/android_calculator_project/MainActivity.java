@@ -57,12 +57,21 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(Style.currentTheme);
         setContentView(R.layout.activity_main);
 
         initialization();
         setListener();
         setListenerFunction();
+        call_Settings();
 
+    }
+
+    protected void call_Settings(){
+        (findViewById(R.id.button_settings)).setOnClickListener(view -> {
+            Intent intent = new Intent(this, SettingsActivity.class);
+            this.startActivity(intent);
+        });
     }
 
     @Override

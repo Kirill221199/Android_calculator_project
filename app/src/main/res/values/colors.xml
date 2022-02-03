@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="aquamarine_500">#FF018786</color>
-    <color name="aquamarine_700">#FF018786</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="special">#8c8f00</color>
-    <color name="special_min">#7F8109</color>
     <color name="colorless">#1A000000</color>
     <color name="colorless_full">#00000000</color>
+
+    <color name="aquamarine_500">#036564</color>
+    <color name="aquamarine_700">#014948</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="text_default">#8c8f00</color>
+
+    <color name="red">#83120A</color>
+    <color name="red_dark">#610902</color>
+    <color name="red_light">#EF7B73</color>
+    <color name="text_red">#F3C8C5</color>
+
+    <color name="green">#045908</color>
+    <color name="green_dark">#034906</color>
+    <color name="green_light">#4EE454</color>
+    <color name="text_green">#AEECB1</color>
+
+    <color name="blue">#021371</color>
+    <color name="blue_dark">#020F57</color>
+    <color name="blue_light">#5E71E1</color>
+    <color name="text_blue">#9EAAEA</color>
 
 </resources>

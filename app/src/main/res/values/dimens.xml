@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="symbol_size">39sp</dimen>
+    <dimen name="symbol_size">36sp</dimen>
     <dimen name="symbol_size_land">26sp</dimen>
     <dimen name="button_width">80dp</dimen>
     <dimen name="button_height">90dp</dimen>
