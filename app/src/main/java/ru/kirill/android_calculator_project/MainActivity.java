@@ -62,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
         initialization();
         setListener();
         setListenerFunction();
-        call_settings();
 
     }
 
@@ -78,13 +77,6 @@ public class MainActivity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         result = savedInstanceState.getFloat("result");
         memory.setText(String.valueOf(result));
-    }
-
-    public void call_settings() {
-        (findViewById(R.id.button_settings)).setOnClickListener(view -> {
-            Intent intent = new Intent(this, SettingsActivity.class);
-            this.startActivity(intent);
-        });
     }
 
     public void initialization() {
