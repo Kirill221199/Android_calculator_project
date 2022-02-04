@@ -14,6 +14,11 @@
         <item name="android:navigationBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
         <item name="android:textColor">@color/text_default</item>
+        <item name="materialButtonStyle">@style/myButton_Default</item>
+    </style>
+
+    <style name="myButton_Default" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/text_default</item>
     </style>
 
     <style name="Style_Red" parent="Theme.MaterialComponents.DayNight.NoActionBar">
@@ -32,6 +37,11 @@
         <item name="android:textColor">@color/text_red</item>
         <item name="android:textStyle">italic</item>
         <item name="android:background">@color/red</item>
+        <item name="materialButtonStyle">@style/myButton_Red</item>
+    </style>
+
+    <style name="myButton_Red" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/text_red</item>
     </style>
 
     <style name="Style_Green" parent="Theme.MaterialComponents.DayNight.NoActionBar">
@@ -50,6 +60,11 @@
         <item name="android:textColor">@color/text_green</item>
         <item name="android:textStyle">bold</item>
         <item name="android:background">@color/green</item>
+        <item name="materialButtonStyle">@style/myButton_Green</item>
+    </style>
+
+    <style name="myButton_Green" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/text_green</item>
     </style>
 
     <style name="Style_Blue" parent="Theme.MaterialComponents.DayNight.NoActionBar">
@@ -68,6 +83,12 @@
         <item name="android:textColor">@color/text_blue</item>
         <item name="android:textStyle">bold|italic</item>
         <item name="android:background">@color/blue</item>
+        <item name="materialButtonStyle">@style/myButton_Blue</item>
     </style>
+
+    <style name="myButton_Blue" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/text_blue</item>
+    </style>
+
 
 </resources>
