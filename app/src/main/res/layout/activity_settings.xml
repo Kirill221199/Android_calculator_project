@@ -38,26 +38,22 @@
             android:id="@+id/button_default"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/text_default"
             android:text="Default style"/>
 
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/button_red"
             android:layout_width="match_parent"
-            android:textColor="@color/text_default"
             android:layout_height="wrap_content"
             android:text="Red style" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/button_green"
             android:layout_width="match_parent"
-            android:textColor="@color/text_default"
             android:layout_height="wrap_content"
             android:text="Green style" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/button_blue"
-            android:textColor="@color/text_default"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Blue style" />

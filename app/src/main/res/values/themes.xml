@@ -15,11 +15,19 @@
         <!-- Customize your theme here. -->
         <item name="android:textColor">@color/text_default</item>
         <item name="materialButtonStyle">@style/myButton_Default</item>
+        <item name="radioButtonStyle">@style/myRadioButton_Default</item>
+        <item name="android:windowBackground">@drawable/fon</item>
     </style>
 
     <style name="myButton_Default" parent="Widget.MaterialComponents.Button">
         <item name="android:textColor">@color/text_default</item>
     </style>
+
+    <style name="myRadioButton_Default" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textColor">@color/text_default</item>
+    </style>
+
+
 
     <style name="Style_Red" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
@@ -36,13 +44,20 @@
         <!-- Customize your theme here. -->
         <item name="android:textColor">@color/text_red</item>
         <item name="android:textStyle">italic</item>
-        <item name="android:background">@color/red</item>
         <item name="materialButtonStyle">@style/myButton_Red</item>
+        <item name="radioButtonStyle">@style/myRadioButton_Red</item>
+        <item name="android:windowBackground">@drawable/fon_red</item>
     </style>
 
     <style name="myButton_Red" parent="Widget.MaterialComponents.Button">
         <item name="android:textColor">@color/text_red</item>
     </style>
+
+    <style name="myRadioButton_Red" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textColor">@color/text_red</item>
+    </style>
+
+
 
     <style name="Style_Green" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
@@ -59,13 +74,20 @@
         <!-- Customize your theme here. -->
         <item name="android:textColor">@color/text_green</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:background">@color/green</item>
         <item name="materialButtonStyle">@style/myButton_Green</item>
+        <item name="radioButtonStyle">@style/myRadioButton_Green</item>
+        <item name="android:windowBackground">@drawable/fon_green</item>
     </style>
 
     <style name="myButton_Green" parent="Widget.MaterialComponents.Button">
         <item name="android:textColor">@color/text_green</item>
     </style>
+
+    <style name="myRadioButton_Green" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textColor">@color/text_green</item>
+    </style>
+
+
 
     <style name="Style_Blue" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
@@ -82,11 +104,16 @@
         <!-- Customize your theme here. -->
         <item name="android:textColor">@color/text_blue</item>
         <item name="android:textStyle">bold|italic</item>
-        <item name="android:background">@color/blue</item>
         <item name="materialButtonStyle">@style/myButton_Blue</item>
+        <item name="radioButtonStyle">@style/myRadioButton_Blue</item>
+        <item name="android:windowBackground">@drawable/fon_blue</item>
     </style>
 
     <style name="myButton_Blue" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/text_blue</item>
+    </style>
+
+    <style name="myRadioButton_Blue" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="android:textColor">@color/text_blue</item>
     </style>
 
