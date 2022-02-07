@@ -622,6 +622,8 @@ public class MainActivity extends AppCompatActivity {
         znak = null;
         sb_first.delete(0,sb_first.length());
         sb_second.delete(0,sb_second.length());
+        flag_sb_first = false;
+        flag_sb_second = false;
     }
 
     public void clearVarNext(){
@@ -631,6 +633,9 @@ public class MainActivity extends AppCompatActivity {
         sb_second.delete(0,sb_second.length());
         sb_first.delete(0,sb_first.length());
         sb_first.append(result);
+        flag_sb_first = false;
+        flag_sb_second = false;
+
     }
 
 

@@ -9,7 +9,7 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/button_return"
-        android:layout_width="@dimen/symbol_size"
+        android:layout_width="@dimen/text_size_output"
         android:layout_height="@dimen/symbol_size"
         android:background="@color/colorless_full"
         app:layout_constraintStart_toStartOf="parent"
