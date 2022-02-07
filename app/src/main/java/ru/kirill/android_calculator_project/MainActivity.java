@@ -1,6 +1,9 @@
 package ru.kirill.android_calculator_project;
 
+import android.app.Notification;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -57,14 +60,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTheme(Style.currentTheme);
+        setTheme(getMyTheme());
         setContentView(R.layout.activity_main);
 
         initialization();
         setListener();
         setListenerFunction();
         call_Settings();
+    }
 
+    public int getMyTheme(){
+        SharedPreferences sharedPreferences = getSharedPreferences("theme", MODE_PRIVATE);
+        return sharedPreferences.getInt("key", R.style.Style_Default);
     }
 
     protected void call_Settings(){
